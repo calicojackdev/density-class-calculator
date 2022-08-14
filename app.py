@@ -14,7 +14,7 @@ app = FastAPI(
     docs_url=None,
     redoc_url="/docs",
     openapi_url="/docs/openapi.json",
-    contact={"email":"freightconjugate@gmail.com"},
+    contact={"email":"calicojackdev@gmail.com"},
     license_info={"name":"The Unlicense"}
 )
 
