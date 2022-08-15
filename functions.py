@@ -11,7 +11,6 @@ def get_timestamp() -> str:
     return timestamp
 
 def build_error_from_pydantic(exc_list:list):
-    error_res = {}
     exc_msg = exc_list[0]['msg']
     exc_loc = exc_list[0]['loc']
     exc_type = exc_list[0]['type']
@@ -24,8 +23,7 @@ def build_error_from_pydantic(exc_list:list):
         error_string = f"{exc_field} {exc_msg}"
     if  exc_type == "value_error.jsondecode":
         error_string = exc_msg
-    error_res['error'] = error_string
-    return error_res
+    return error_string
 
 def validate_density_payload(load_items) -> None: 
     if len(load_items) > 100:
@@ -37,7 +35,7 @@ def validate_density_payload(load_items) -> None:
             type(item.weight) != int
             ):
             dim_type_error_string = f"please enter valid integer dims in items[{index}]"
-            raise TypeError(dim_type_error_string)
+            raise ValueError(dim_type_error_string)
         if (item.length <= 0 or
             item.width <= 0 or 
             item.height <= 0 or 

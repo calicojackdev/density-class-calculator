@@ -20,10 +20,6 @@ class Item(BaseModel):
 class Request(BaseModel):
     items:List[Item]
 
-class ValidationErrorResponse(BaseModel):
-    field:str
-    error:str
-
 class ErrorResponse(BaseModel):
     error:str
 
@@ -45,5 +41,17 @@ class CalculatedResponse(BaseModel):
             }
         }
 
-# class Response(BaseModel):
-#     message:CalculatedResponse
+responses = {
+    200: {
+        "description": "Computed class",
+        "content": {
+            "application/json"
+        },
+        "model":CalculatedResponse
+    },
+    422: {
+        "description": "Invalid input",
+        "model": ErrorResponse, 
+    }
+    
+}
