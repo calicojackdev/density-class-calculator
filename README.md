@@ -17,26 +17,26 @@ Getting started may look like:
 # Using the API  
 1. Send a POST request to the `/calculate` endpoint:  
 ```
+{
+    "items":[
         {
-            "items":[
-                {
-                    "length":48,
-                    "width":48,
-                    "height":48,
-                    "weight":500
-                }
-            ]
+            "length":48,
+            "width":48,
+            "height":48,
+            "weight":500
         }
+    ]
+}
 ```
 2. Receive a response:
 ```
-        {
-            "cubicDimensions": 64.0,
-            "totalWeight": 500.0,
-            "totalDensity": 7.81,
-            "freightClass": 125,
-            "unitType": "standard"
-        }
+{
+    "cubicDimensions": 64.0,
+    "totalWeight": 500.0,
+    "totalDensity": 7.81,
+    "freightClass": 125,
+    "unitType": "standard"
+}
 ```
 This API expects "standard" units for input and does not support metric units. 
 
