@@ -16,6 +16,7 @@ Getting started may look like:
 
 # Using the API  
 1. Send a POST request to the `/calculate` endpoint:  
+```
         {
             "items":[
                 {
@@ -26,7 +27,9 @@ Getting started may look like:
                 }
             ]
         }
+```
 2. Receive a response:
+```
         {
             "cubicDimensions": 64.0,
             "totalWeight": 500.0,
@@ -34,7 +37,7 @@ Getting started may look like:
             "freightClass": 125,
             "unitType": "standard"
         }
-
+```
 This API expects "standard" units for input and does not support metric units. 
 
 # Contact
