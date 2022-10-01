@@ -9,9 +9,9 @@ Freight class depends on several features of a load, including:
 This API was built using FastAPI.  
 
 # Running the API  
-This app has not been dockerized, so more primitive methods may be employed.  
-Getting started may look like:  
+ Getting started may look like:  
 * Clone this repo into your local dev environment  
+* Install requirements: `pip install -r requirements.txt`
 * Start the server: `uvicorn app:app`  
 
 # Using the API  
